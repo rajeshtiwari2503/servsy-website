@@ -1,0 +1,62 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paint0_linear" x1="400" y1="0" x2="400" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="400" y1="100" x2="400" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1E40AF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="800" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#paint0_linear)"/>
+  
+  <!-- Service Technician -->
+  <g filter="url(#shadow)" transform="translate(100, 50)">
+    <rect x="50" y="50" width="500" height="400" rx="20" fill="white"/>
+    <circle cx="300" cy="150" r="80" fill="#2563EB" fill-opacity="0.1"/>
+    
+    <!-- Technician Figure -->
+    <path d="M280 120 L320 120 L330 200 L270 200 Z" fill="#2563EB"/>
+    <circle cx="300" cy="100" r="30" fill="#2563EB"/>
+    <rect x="270" y="200" width="20" height="100" fill="#1E40AF"/>
+    <rect x="310" y="200" width="20" height="100" fill="#1E40AF"/>
+    
+    <!-- Tools -->
+    <rect x="350" y="150" width="100" height="30" rx="5" fill="#64748B"/>
+    <circle cx="370" cy="165" r="8" fill="#94A3B8"/>
+    <circle cx="390" cy="165" r="8" fill="#94A3B8"/>
+    <circle cx="410" cy="165" r="8" fill="#94A3B8"/>
+    <circle cx="430" cy="165" r="8" fill="#94A3B8"/>
+    
+    <!-- Appliance -->
+    <rect x="150" y="250" width="120" height="150" rx="10" fill="#E2E8F0"/>
+    <rect x="170" y="270" width="80" height="60" rx="5" fill="#94A3B8"/>
+    <circle cx="210" cy="360" r="20" fill="#94A3B8"/>
+    <rect x="190" y="390" width="40" height="5" fill="#64748B"/>
+    
+    <!-- Service Logo -->
+    <circle cx="400" cy="300" r="50" fill="#2563EB"/>
+    <text x="400" y="315" font-family="Arial" font-size="24" fill="white" text-anchor="middle">SERVSY</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="700" cy="100" r="30" fill="#2563EB" fill-opacity="0.2"/>
+  <circle cx="650" cy="150" r="20" fill="#2563EB" fill-opacity="0.15"/>
+  <circle cx="720" cy="180" r="15" fill="#2563EB" fill-opacity="0.1"/>
+  
+  <circle cx="100" cy="500" r="30" fill="#2563EB" fill-opacity="0.2"/>
+  <circle cx="150" cy="450" r="20" fill="#2563EB" fill-opacity="0.15"/>
+  <circle cx="80" cy="420" r="15" fill="#2563EB" fill-opacity="0.1"/>
+</svg>

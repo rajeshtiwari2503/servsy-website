@@ -1,0 +1,6 @@
+<svg width="200" height="100" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" rx="10" fill="#F0F4FF"/>
+  <path d="M75 50 L100 25 L125 50 L100 75 Z" fill="#E0E7FF" stroke="#818CF8" stroke-width="2"/>
+  <circle cx="100" cy="50" r="15" fill="#F0F4FF" stroke="#818CF8" stroke-width="2"/>
+  <text x="80" y="55" font-family="Arial" font-size="16" font-weight="bold" fill="#4F46E5">Brand 4</text>
+</svg>
