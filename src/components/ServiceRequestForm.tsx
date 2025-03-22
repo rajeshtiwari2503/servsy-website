@@ -44,8 +44,6 @@ const ServiceRequestForm: React.FC<ServiceRequestFormProps> = ({ className }) =>
     },
     onSubmit: async (values) => {
       try {
-        console.log('Submitting service request:', values);
-        
         const response = await fetch('https://crm-backend-weld-pi.vercel.app/addServiceRequest', {
           method: 'POST',
           headers: {
@@ -53,38 +51,36 @@ const ServiceRequestForm: React.FC<ServiceRequestFormProps> = ({ className }) =>
           },
           body: JSON.stringify(values),
         });
-
+      
+        // Check if response is valid JSON
         const data = await response.json();
-        console.log('Service request response:', data);
-
-        if (response.ok && data.success) {
+        
+        console.log("API Response:", data); // Debugging log
+      
+        // Handle success based on `status` field from API response
+        if (data.status) {
           setIsSuccess(true);
           toast({
             title: "Service Request Submitted",
-            description: `We'll contact you shortly to confirm your appointment. Your request ID is ${data.data?.requestId || 'SR-' + Date.now()}.`,
+            description: data.msg || "Request has been submitted successfully.",
           });
-          
-          // Reset success state after 3 seconds
+      
           setTimeout(() => {
             setIsSuccess(false);
             resetForm();
           }, 3000);
         } else {
-          console.error('Service request submission failed:', data?.message);
-          toast({
-            title: "Error",
-            description: data?.message || "Failed to submit service request. Please try again.",
-            variant: "destructive"
-          });
+          throw new Error(data.msg || "Failed to submit service request.");
         }
       } catch (error) {
-        console.error('Error submitting service request:', error);
+        console.error("Catch Error:", error);
         toast({
           title: "Error",
-          description: "An error occurred while processing your request. Please try again later.",
+          description: error.message || "Something went wrong!",
           variant: "destructive"
         });
       }
+      
     }
   });
 
