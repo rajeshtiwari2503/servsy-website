@@ -46,7 +46,7 @@ const ServiceRequestForm: React.FC<ServiceRequestFormProps> = ({ className }) =>
       try {
         console.log('Submitting service request:', values);
         
-        const response = await fetch('/api/service-request', {
+        const response = await fetch('https://crm-backend-weld-pi.vercel.app/addServiceRequest', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -70,10 +70,10 @@ const ServiceRequestForm: React.FC<ServiceRequestFormProps> = ({ className }) =>
             resetForm();
           }, 3000);
         } else {
-          console.error('Service request submission failed:', data.message);
+          console.error('Service request submission failed:', data?.message);
           toast({
             title: "Error",
-            description: data.message || "Failed to submit service request. Please try again.",
+            description: data?.message || "Failed to submit service request. Please try again.",
             variant: "destructive"
           });
         }
