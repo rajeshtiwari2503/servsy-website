@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await fetch('/api/contact', {
+        const response = await fetch('https://crm-backend-weld-pi.vercel.app/addServiceRequest', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -50,11 +50,11 @@ const ContactForm: React.FC = () => {
 
         const data = await response.json();
 
-        if (response.ok && data.success) {
+        if (data.status) {
           setIsSuccess(true);
           toast({
             title: "Message Sent",
-            description: data.message || "We'll get back to you shortly.",
+            description: data.msg || "We'll get back to you shortly.",
           });
           
           // Reset success state after 3 seconds
@@ -65,7 +65,7 @@ const ContactForm: React.FC = () => {
         } else {
           toast({
             title: "Error",
-            description: data.message || "Failed to send message. Please try again.",
+            description: data.msg || "Failed to send message. Please try again.",
             variant: "destructive"
           });
         }

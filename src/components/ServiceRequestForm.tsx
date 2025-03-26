@@ -76,7 +76,7 @@ const ServiceRequestForm: React.FC<ServiceRequestFormProps> = ({ className }) =>
         console.error("Catch Error:", error);
         toast({
           title: "Error",
-          description: error.message || "Something went wrong!",
+          description: error.msg || "Something went wrong!",
           variant: "destructive"
         });
       }
