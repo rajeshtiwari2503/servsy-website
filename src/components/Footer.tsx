@@ -12,18 +12,18 @@ const Footer: React.FC = () => {
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-500/5 rounded-full filter blur-3xl"></div>
-      
+
       {/* Top curved section */}
       <div className="bg-black/5 h-16">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-16 transform translate-y-1">
-          <path 
-            fill="hsl(var(--card))" 
-            fillOpacity="1" 
+          <path
+            fill="hsl(var(--card))"
+            fillOpacity="1"
             d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
           </path>
         </svg>
       </div>
-      
+
       {/* Main footer content */}
       <div className="bg-card border-t py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <Mail className="h-5 w-5" />
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <MapPin className="h-5 w-5" />
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                 <p className="text-sm text-muted-foreground">Noida, Sector 62</p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <Clock className="h-5 w-5" />
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Main footer grid */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-lg font-bold mb-6 relative">
                 <span className="relative z-10">Quick Links</span>
@@ -168,9 +168,21 @@ const Footer: React.FC = () => {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="https://drive.google.com/file/d/1-Ru-jzo1dgaPwosDP68td-Gf1-HlvzCR/view?usp=sharing" // Replace with your APK link
+                    className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                    target="_blank" // Opens in a new tab
+                    rel="noopener noreferrer" // Security best practice
+                  >
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                    Download APP
+                  </Link>
+                </li>
+
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-lg font-bold mb-6 relative">
                 <span className="relative z-10">Services</span>
@@ -209,7 +221,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-lg font-bold mb-6 relative">
                 <span className="relative z-10">Newsletter</span>
@@ -219,10 +231,10 @@ const Footer: React.FC = () => {
                 Subscribe to our newsletter for the latest updates on services, offers, and industry insights.
               </p>
               <NewsletterSubscription />
-              
+
               <div className="mt-6">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full rounded-full hover:bg-primary hover:text-white transition-all duration-300"
                   onClick={() => {
                     const element = document.getElementById("contact");
@@ -236,9 +248,9 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <Separator className="my-8" />
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} <span className="text-primary font-medium">Servsy</span>. All rights reserved.
